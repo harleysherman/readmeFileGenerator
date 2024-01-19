@@ -5,9 +5,9 @@
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 - What was your motivation? To create a readme through prompts on the command line.
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.") This project was created to better understand node.js and communicating with the terminal
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.") This project was created to better understand node.js and communicating with the terminal.
 - What problem does it solve? The goal is to end information in to create a readme so that I don't have to type it up by hand.
-- What did you learn? I learned how to prompt for the questions, and generate a readme based on those answers.
+- What did you learn? I learned how to prompt for the questions, generate a readme based on those answers, and add links, badges, and email to readme.
 
 ## Table of Contents (Optional)
 
@@ -20,7 +20,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-To install, download the repo from GitHub and work on the project locally on your device.
+To install, download the repo from GitHub and work on the project locally on your device. Please use npm install to install your own node modules in the terminal.
 
 ## Usage
 
