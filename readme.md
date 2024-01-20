@@ -9,9 +9,9 @@
 A short description explaining the what, why, and how of your project:
 
 - Motivation: curiousity
-- Reason for build: cause i can
-- Solution: some problems solve
-- What I learned: node
+- Reason for build: Cause I Can
+- Solution: SOme problems where solved here
+- What I learned: Node.js
 
 ## Table of Contents
 
@@ -22,17 +22,17 @@ A short description explaining the what, why, and how of your project:
 
 ## Installation
 
-github repo
+Download github repo
 
 ## Usage
 
-some use cases
+Some use cases live here
 
-[screenshot](./assets/images/screenshot.jpg)
+[screenshot](./images/kittens.png)
 
 ## Credits
 
-thank you
+Thank you to all my fans.
 
 ## License
 
@@ -42,6 +42,7 @@ This project is covered by MIT. You can find the license [Here](./LICENSE).
 
 ## Questions
 
+Here are different ways to contact me:
 [harleysherman](https://www.github.com/harleysherman)
 
 [hello@email.com](mailto:hello@email.com)
@@ -53,12 +54,12 @@ This project is covered by MIT. You can find the license [Here](./LICENSE).
 
 ## Features
 
-some features
+Some features live here.
 
 ## How to Contribute
 
-![harleysherman](https://gihub.com/harleysherman)
+[harleysherman](https://gihub.com/harleysherman)
 
 ## Tests
 
-some test cases
+Some test cases live here.

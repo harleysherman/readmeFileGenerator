@@ -89,7 +89,7 @@ ${installation}
 
 ${useCases}
 
-[screenshot](./assets/images/${screenshotLink})
+[screenshot](./images/${screenshotLink})
 
 ## Credits
 
