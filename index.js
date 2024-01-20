@@ -68,7 +68,7 @@ const questions = [
     },
     {
         type : 'input',
-        message : "Please enter the text for your badge.",
+        message : "Please enter the text for your badge. (languages only)",
         name : 'badge',
     },
     {
@@ -90,11 +90,20 @@ const questions = [
 
 // TODO: Create a function to initialize app
 function init() {
-    //prompt for questions in terminal
+    //prompt for questions in terminal, then write readme, then print to console. If none of that works, print error.
     inquirer.prompt(questions)
     .then((response) => fs.writeFile ('readme.md', generateReadme(response)))
     .then(() => console.log('Successfully wrote to readme.md'))
     .catch((err) => console.error(err));
+
+    // Promise syntax long way
+    //const tryThis = new Promise((reject, resolve) => {
+    //     if(yes) {
+    //         resolve('yes');
+    //     } else {
+    //         reject('no')
+    //     }
+    // })
 }
 
 // Function call to initialize app

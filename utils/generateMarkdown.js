@@ -5,49 +5,65 @@ const { error } = require("console");
 // If there is a bad text enter by the user, return an badge image
 function renderLicenseBadge(badge) {
   if (badge) {
-    badge = `https://img.shields.io/badge/badge_${badge}`;
-    return badge;
+    let selectedBadge;
+    selectedBadge = `https://img.shields.io/badge/${badge}-langauge-green`;
+    return selectedBadge;
   }
 }
 
 // TODO: Create a function that returns the license link
 function renderLicenseLink (license) {
+  let selectedLicense;
   switch (license) {
     case 'MIT':
       console.log("This project uses the MIT License.");
-      //license = (https://img.shields.io/badge/${license});
+      // https://img.shields.io/badge/any_text-you_like-blue
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
+      //add mit license link
       break;
     case 'Apache 2.0':
       console.log("This project uses the Apache 2.0 License.");
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
       break;
     case 'GPL 3.0':
       console.log("This project uses the GPL 3.0 License.");
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
       break;
     case 'BSD 2-Clause':
       console.log("This project uses the BSD 2-Clause License.");
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
       break;
     case 'BSD 3-Clause':
       console.log("This project uses the BSD 3-Clause License.");
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
       break;
     case 'BSD 4-Clause':
       console.log("This project uses the BSD 4-Clause License.");
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
       break;
     default:
-      console.log('Check your maths!');
+      console.log('License selected is none.');
+      selectedLicense = `https://img.shields.io/badge/${license}-license-blue`;
   }
+  return selectedLicense;
 }
 
-
 // TODO: Create a function that returns the GitHub contribute section of README
-// If there is no license, return an empty string
+// returns git hub profile link
 function renderGitHubLink (gitHubUserName) {
-  gitHubUserName = `https://gihub.com/${gitHubUserName}`;
-  return gitHubUserName;
+  let selectedGitHubUserName;
+  selectedGitHubUserName = `https://gihub.com/${gitHubUserName}`;
+  return selectedGitHubUserName;
 }
 
 // TODO: Create a function to generate markdown for README
-//returning a template literal in index.js generateMarkdown
-const generateReadme = ({projectName, motivation, buildReason, solution, learn, installation, useCases, screenshotLink, credit, license, badge, features, gitHubUserName, contributorInfoEmail, testCases}) => `# <${projectName}>
+//returning a template literal for readme.md
+const generateReadme = ({projectName, motivation, buildReason, solution, learn, installation, useCases, screenshotLink, credit, license, badge, features, gitHubUserName, contributorInfoEmail, testCases}) => 
+`# <${projectName}>
+
+## Badges for License
+
+![${license}](${renderLicenseLink (license)})
 
 ## Description
 
@@ -73,8 +89,7 @@ ${installation}
 
 ${useCases}
 
-[screenshot](./assest/images/${screenshotLink})
-
+[screenshot](./assets/images/${screenshotLink})
 
 ## Credits
 
@@ -84,17 +99,17 @@ ${credit}
 
 ![${license}](${renderLicenseLink (license)})
 
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-Link EX: My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+This project is covered by ${license}. You can find the license [Here](./LICENSE).
 
 ## Questions
 
-![${gitHubUserName}](https://www.github.com/${gitHubUserName})
-![${contributorInfoEmail}](mailto:${contributorInfoEmail})
+Here are different ways to contact me:
+[${gitHubUserName}](https://www.github.com/${gitHubUserName})
+
+[${contributorInfoEmail}](mailto:${contributorInfoEmail})
 ---
 
-## Badges
+## Badges for Languages
 
 ![${badge}](${renderLicenseBadge(badge)})
 
@@ -104,7 +119,7 @@ ${features}
 
 ## How to Contribute
 
-![${gitHubUserName}](${renderGitHubLink (gitHubUserName)})
+[${gitHubUserName}](${renderGitHubLink (gitHubUserName)})
 
 ## Tests
 
